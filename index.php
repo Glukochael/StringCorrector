@@ -43,4 +43,4 @@ function processInput(string $input, array $constrains, array $validators, array
 	return processInput($correct($input, $parameters), $constrains, $validators, $correctors);
 }
 
-echo sprintf("%s\n", processInput('@QQQQQ', $constrains, $validators, $correctors)); 
+echo sprintf("%s\n", processInput('@QQ23456789QQQ', $constrains, $validators, $correctors)); 
