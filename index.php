@@ -20,7 +20,7 @@ $constrains = [
 ];
 
 
-function getFaildContrainTag(string $input, array $constrains, array $validators, array $correctors): ?string
+function getFaildContrainTag(string $input, array $constrains, array $validators): ?string
 {
 	foreach ($constrains as $constrainTag => $parameters) {
 		$isNotValid = $validators[$constrainTag];
