@@ -7,16 +7,20 @@ require_once 'src/validators.php';
 
 $validators = [
 	'exclude' => 'includeBannedWords',
+	'notStartWith' => 'startWithBanned',
+	'notEndWith' => 'endsWithBanned',
 ];
 
 $correctors = [
 	'exclude' => 'delBannedWords',
+	'notStartWith' => 'delBannedStartWords',
+	'notEndWith' => 'delBannedEndWords',
 ];
 
 $constrains = [
 	'exclude' => ['QQ', '333'],
-	// 'notStartWith' => ['_'],
-	// 'notEndWith' => ['id'],
+	'notStartWith' => ['_'],
+	'notEndWith' => ['id'],
 ];
 
 
@@ -43,4 +47,4 @@ function processInput(string $input, array $constrains, array $validators, array
 	return processInput($correct($input, $parameters), $constrains, $validators, $correctors);
 }
 
-echo sprintf("%s\n", processInput('@QQ23456789QQQ', $constrains, $validators, $correctors)); 
+echo sprintf("%s\n", processInput('@QQ23456789QQQid', $constrains, $validators, $correctors)); 

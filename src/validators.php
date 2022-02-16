@@ -24,7 +24,7 @@ function startWithBanned(string $str, array $bannedWords): bool
 	return false;
 }
 
-function finalsWithBanned(string $str, array $bannedWords): bool
+function endsWithBanned(string $str, array $bannedWords): bool
 {
 	foreach ($bannedWords as $word) {
 		if (strpos($str, $word) === (strlen($str) - strlen($word))) {
